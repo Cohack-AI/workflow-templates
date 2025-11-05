@@ -1,0 +1,12 @@
+{
+    "name": "@cohack/example-email-automation",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "description": "Email automation Cohack workflow starter.",
+    "scripts": {
+        "build": "echo \"Add your build step\"",
+        "deploy": "cohack deploy",
+        "start": "node ./src/workflow.js"
+    }
+}
