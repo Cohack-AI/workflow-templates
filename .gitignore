@@ -3,3 +3,4 @@
 *.npmrc
 *.env*
 *.DS_Store
+.cohack

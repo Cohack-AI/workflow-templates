@@ -1,9 +1,8 @@
 import { WorkflowOptions } from '@cohack/client';
 import Workflow from './workflow';
 
-const wf = new Workflow();
-
-const options: WorkflowOptions = {
+export const wf = new Workflow();
+export const options: WorkflowOptions = {
     retryPolicy: {
         maxAttempts: 5,
         initialInterval: { milliseconds: 500 },
