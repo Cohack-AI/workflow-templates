@@ -1,6 +1,4 @@
-*node_modules
-*package-lock.json
-*.npmrc
-*.env*
-*.DS_Store
-.cohack
+*/node_modules
+*/.cohack
+*/.npmrc
+*/.package-lock.json

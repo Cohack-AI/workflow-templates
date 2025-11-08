@@ -9,7 +9,7 @@
         "deploy": "npx cohack deploy"
     },
     "dependencies": {
-        "@cohack/client": "^0.0.28",
+        "@cohack/client": "^0.0.29",
         "zod": "^4.1.12"
     }
 }
