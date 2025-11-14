@@ -1,0 +1,16 @@
+{
+  "name": "@cohack/example-empty",
+  "private": true,
+  "version": "0.0.10",
+  "description": "Starter Cohack workflow project (empty template).",
+  "scripts": {
+    "test": "npx tsx test/index.ts",
+    "build": "npx cohack build",
+    "deploy": "npx cohack deploy"
+  },
+  "dependencies": {
+    "@cohack/client": "^1.0.0",
+    "@cohack/types": "latest",
+    "zod": "^4.1.12"
+  }
+}
