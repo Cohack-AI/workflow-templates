@@ -3,15 +3,14 @@ import { WfInput, WfOutput } from '.';
 
 
 class Workflow extends BaseWorkflow {
-    constructor(wfConfig: BaseWorkflowCategoryConfig , client: CohackClient, ) {
-        super(wfConfig, client);
+    constructor(wfConfig: BaseWorkflowCategoryConfig) {
+        super(wfConfig);
     }
 
     async run(input: WfInput): Promise<WfOutput> {
-        /**
-         * Write Workflow here using input and 
-         */
-        return {};
+        return {
+            name: 'hello world'
+        };
     }
 }
 

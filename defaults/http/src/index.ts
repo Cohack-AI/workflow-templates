@@ -5,7 +5,9 @@ import { BaseWorkflowCategoryConfig, createCohackClient, WorkflowOptions } from 
 import { WorkflowTriggerType } from '@cohack/types';
 
 const input = z.object({});
-const output = z.object({});
+const output = z.object({
+    name: 'hello world'
+});
 export type WfInput = z.input<typeof input>;
 export type WfOutput = z.input<typeof output>;
 
@@ -24,5 +26,5 @@ export const options: WorkflowOptions = {
     },
 };
 
-export const wf = new Workflow(wfConfig, client);
+export const wf = new Workflow(wfConfig);
 export const handler = wf.getLambdaHandler(options);
