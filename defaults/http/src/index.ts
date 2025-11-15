@@ -1,12 +1,12 @@
 import z from 'zod'
 import Workflow from './workflow';
-import { client } from './client';
 import { BaseWorkflowCategoryConfig, createCohackClient, WorkflowOptions } from '@cohack/client';
 import { WorkflowTriggerType } from '@cohack/types';
 
-const input = z.object({});
+const input = z.object({
+});
 const output = z.object({
-    name: 'hello world'
+    name: z.string()
 });
 export type WfInput = z.input<typeof input>;
 export type WfOutput = z.input<typeof output>;

@@ -1,5 +1,6 @@
-import { BaseWorkflowCategoryConfig,  BaseWorkflow, CohackClient, } from '@cohack/client';
 import { WfInput, WfOutput } from '.';
+import { BaseWorkflowCategoryConfig } from '@cohack/client';
+import { BaseWorkflow } from '@cohack/client';
 
 
 class Workflow extends BaseWorkflow {
@@ -8,6 +9,7 @@ class Workflow extends BaseWorkflow {
     }
 
     async run(input: WfInput): Promise<WfOutput> {
+        await this.client.ctx.sleep({seconds: 4})
         return {
             name: 'hello world'
         };
