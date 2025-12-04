@@ -1,6 +1,5 @@
 import { wf } from '@/index';
 import { testingUtils } from '@cohack/client';
-import { getIngress } from 'node_modules/@cohack/client/dist/workflows/test-utils';
 
 export const runTest = async () => {
     try {
@@ -8,7 +7,7 @@ export const runTest = async () => {
         await testingUtils.runTestingServer(defination);
 
         const key = new Date().toISOString();
-        const ingress = getIngress();
+        const ingress = testingUtils.getIngress();
         const client = ingress.workflowClient<typeof defination>(defination, key);
 
         /**
