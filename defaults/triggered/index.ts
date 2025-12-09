@@ -1,19 +1,17 @@
 import z from 'zod';
 import Workflow from './workflow';
 import { BaseWorkflowCategoryConfig, createOutputSchema, WorkflowOptions, WorkflowOutput } from '@cohack/client';
-import { TriggerSlug, WorkflowTriggerType } from '@cohack/types';
-
-const input = z.object({
-    log_id: z.string(),
-    data: z.object(),
-});
+import { TriggerSlug, TriggerData, WorkflowTriggerType } from '@cohack/types';
 
 const output = z.object({
     success: z.boolean().describe(''),
     pong: z.string().describe(''),
 });
 
-export type WfInput = z.input<typeof input>;
+export type WfInput = {
+    log_id: string;
+    data: TriggerData<TriggerSlug.GmailNewGmailMessage>;
+};
 export type WfOutput = {
     schemaRef: 'json';
     content: z.infer<typeof output>;

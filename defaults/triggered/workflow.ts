@@ -9,12 +9,11 @@ class Workflow extends BaseWorkflow<WfInput, WfOutput> {
     }
 
     async run(input: WfInput): Promise<WfOutput> {
-        const triggerData = input.data as TriggerData<TriggerSlug.GmailNewGmailMessage>;
         return {
             schemaRef: 'json',
             content: {
                 success: true,
-                pong: triggerData.message_id,
+                pong: input.data.message_id,
             },
         };
     }
