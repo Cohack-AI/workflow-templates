@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "allowJs": false,
+        "target": "ES2022",
+        "esModuleInterop": true,
+        "noImplicitAny": true,
+        "sourceMap": false,
+        "skipLibCheck": false,
+        "forceConsistentCasingInFileNames": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "downlevelIteration": true,
+        "declaration": true,
+        "declarationMap": true,
+        "composite": true,
+        "incremental": true,
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
+        "outDir": "./dist",
+        "rootDir": "./",
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"]
+        },
+        "resolveJsonModule": true
+    },
+    "include": ["examples/**/*", "test/**/*"],
+    "exclude": ["node_modules", "dist"]
+}
