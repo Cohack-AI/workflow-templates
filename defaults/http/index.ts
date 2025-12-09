@@ -1,21 +1,27 @@
-import z from 'zod'
+import z from 'zod';
 import Workflow from './workflow';
-import { BaseWorkflowCategoryConfig, createCohackClient, WorkflowOptions } from '@cohack/client';
+import { BaseWorkflowCategoryConfig, WorkflowOptions, createOutputSchema, WorkflowOutput } from '@cohack/client';
 import { WorkflowTriggerType } from '@cohack/types';
 
 const input = z.object({
+    message: z.string().describe(''),
 });
-const output = z.object({
-    name: z.string()
-});
-export type WfInput = z.input<typeof input>;
-export type WfOutput = z.input<typeof output>;
 
+const output = z.object({
+    success: z.boolean().describe(''),
+    pong: z.string().describe(''),
+});
+
+export type WfInput = z.input<typeof input>;
+export type WfOutput = {
+    schemaRef: 'json';
+    content: z.infer<typeof output>;
+};
 
 const wfConfig: BaseWorkflowCategoryConfig = {
     category: WorkflowTriggerType.OnDemand,
     inputSchema: input,
-    outputSchema: output,
+    outputSchema: createOutputSchema('json', output),
 };
 
 export const options: WorkflowOptions = {

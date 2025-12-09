@@ -24,6 +24,6 @@
         },
         "resolveJsonModule": true
     },
-    "include": ["examples/**/*", "test/**/*"],
+    "include": ["defaults/**/*", "examples/**/*", "test/**/*"],
     "exclude": ["node_modules", "dist"]
 }

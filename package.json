@@ -4,13 +4,13 @@
   "version": "0.0.19",
   "description": "Starter Cohack workflow project (empty template).",
   "scripts": {
-    "test": "npx tsx test/index.ts",
-    "build": "npx cohack build",
-    "deploy": "npx cohack deploy"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@cohack/client": "^1.0.25",
-    "@cohack/types": "latest",
+    "@cohack/client": "^1.0.32",
+    "@cohack/types": "^1.0.176",
+    "tsc": "^2.0.4",
+    "typescript": "^5.9.3",
     "zod": "^4.1.12"
   }
 }

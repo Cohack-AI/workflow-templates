@@ -1,5 +1,5 @@
 import { WfInput, WfOutput, WfResultData } from '.';
-import { BaseWorkflowCategoryConfig, SchemaRef, Step, TerminalError, WorkflowOutput } from '@cohack/client';
+import { BaseWorkflowCategoryConfig, Step, TerminalError, WorkflowOutput } from '@cohack/client';
 import { BaseWorkflow, Signal } from '@cohack/client';
 import { ApprovalKind, DecisionKind, ResolutionPayload } from '@cohack/types';
 
