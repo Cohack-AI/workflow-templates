@@ -13,7 +13,7 @@ class Workflow extends BaseWorkflow<WfInput, WfOutput> {
             schemaRef: 'json',
             content: {
                 success: true,
-                pong: input.data.message_id,
+                pong: input.log_id,
             },
         };
     }
